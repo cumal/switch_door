@@ -1,0 +1,32 @@
+<!DOCTYPE HTML><html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Puerta garaje</title>
+  <style>
+    html { font-family: Arial; display: inline-block; margin: auto auto; text-align: center; background-color: DimGray; }
+    body { margin-top: 20px; }
+    h1 { color: LightGray;margin: auto auto 10px;font-family:Arial;text-shadow: 2px 2px 5px black; }
+    button { display: block;width: auto;background-color: #1abc9c;border: 2px solid black;color: black;padding: 8px 30px;text-decoration: none;font-size: 20px;cursor: pointer;border-radius: 4px;margin: 0px 40px 20px; }
+    .button-on { background-color: Goldenrod;display: inline-block; }
+    .button-engine { background-color: crimson;display: inline-block; }
+    .button-engine-disabled { background-color: silver;display: inline-block; }
+    .button-lock { background-color: gray;display: inline-block; }
+    p { font-size: 1.0rem;color: Goldenrod; }
+    .units { font-size: 0.6rem; color: Silver; }
+    .dht-labels { font-size: 1rem; vertical-align:middle; padding-bottom: 10px; color: Silver; }
+  </style>
+</head>
+<body>
+  <h1>Door Control</h1>
+
+  <button type="button" class="button button-on" onclick=mouseDown("opendoor")>OPEN</button>
+
+</body>
+<script>
+function mouseDown(url) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "/" + url, true);
+  xhttp.send();
+}
+</script>
+</html>
